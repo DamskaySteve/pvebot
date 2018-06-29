@@ -8,8 +8,6 @@ bot.on('ready', function() {
     console.log("Connecter");
 });
 
-bot.login(process.env.TOKEN)
-
 bot.on('message', message =>{
     if (message.content ==="arnaque"){
         message.reply("Merci de ton signalement !");
@@ -41,3 +39,6 @@ bot.on ("guildMemberAdd", member => {
 	member.guild.channels.find("name", "bienvenue").send('Un anti-arnaqueur est aparue ! Bienvenue sur Anti-Arnaque PVE !')
 
 });
+
+
+bot.login(process.env.TOKEN)
